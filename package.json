@@ -1,7 +1,7 @@
 {
   "name": "my-guild-greeter-bot",
   "version": "1.0.0",
-  "type": "module",          
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -9,5 +9,9 @@
   },
   "engines": {
     "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^16.6.1"
   }
 }
