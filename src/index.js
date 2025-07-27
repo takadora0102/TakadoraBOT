@@ -32,4 +32,15 @@ client.on(Events.GuildMemberRemove, member => {
   channel?.send(`👋 ${member.user.tag} さんが退出しました。またいつでもどうぞ！`);
 });
 
+import express from 'express';
+const app  = express();
+
+app.get('/', (_, res) => res.send('Bot is alive ✅'));
+
+const PORT = process.env.PORT || 10_000;   // Render が $PORT を渡す
+app.listen(PORT, '0.0.0.0', () =>
+  console.log(`🌐 Express keep-alive on :${PORT}`)
+);
+
+
 client.login(process.env.DISCORD_TOKEN);
